@@ -674,37 +674,44 @@
                     </div>
 
                     <div id="contact-form-container">
-                        <!-- Visible Netlify form -->
-                        <form name="contact" method="POST" netlify class="contact-form">
-                            <input type="hidden" name="form-name" value="contact" />
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <textarea class="form-control message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <button type="submit" class="default-btn">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                    <!-- Contact Form Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            fetch('https://formspree.io/f/YOUR_FORM_ID', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.ok) {
+                    alert('Thank you for your message!');
+                } else {
+                    alert('There was a problem submitting your form.');
+                }
+            });
+        });
+    </script>
+</section>
+<!-- End Contact Form Section -->
                 
                 
                 <!-- Social Links Section -->
