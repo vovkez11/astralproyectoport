@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Index Page</title>
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/@formspree/jquery@v1.0.0/dist/formspree.min.js"></script>
+</head>
+<body>
+    <h1>Welcome to the Enhanced Index Page</h1>
+
+    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="email">Your email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Send</button>
+    </form>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    Swal.fire('Success!', 'Your message has been sent!', 'success');
+                } else {
+                    Swal.fire('Oops...', 'Something went wrong!', 'error');
+                }
+            }).catch(error => {
+                Swal.fire('Oops...', 'Something went wrong!', 'error');
+            });
+        });
+    </script>
+
+    <!-- Tawk.to Live Chat Widget -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/YOUR_TAWK_ID/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+</body>
+</html>
