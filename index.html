@@ -698,24 +698,21 @@
                        </div>
                     </div>
 
-                    <div id="contact-form-container">
-                    <!-- Contact Form Section -->
-<section id="contact" class="contact-section">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+                <div id="contact-form-container">
+  <form action="https://formspree.io/f/mzdazjvy" method="POST" class="contact-form" id="contact-form">
+    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+    <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+    <textarea class="form-control message" name="message" placeholder="Your Message" rows="5" required></textarea>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+    <!-- Optional: helps Formspree + improves deliverability -->
+    <input type="hidden" name="_subject" value="New message from portfolio site">
+    <input type="text" name="_gotcha" style="display:none">
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+    <button type="submit" class="default-btn">Send Message</button>
+  </form>
+</div>
 
-            <button type="submit">Send</button>
-        </form>
-    </div>
     <script>
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
