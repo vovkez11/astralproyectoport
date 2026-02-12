@@ -1,0 +1,799 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+    
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Emergency preloader fix for deployment -->
+        <script>
+        (function(){
+            var hasHiddenPreloader = false;
+            function hidePreloader() {
+                if (hasHiddenPreloader) return;
+                hasHiddenPreloader = true;
+                try { document.body.classList.add('loaded'); } catch(e) {}
+                var pre = document.querySelector('.site-preloader-wrap');
+                if (pre) {
+                    pre.style.opacity = '0';
+                    pre.style.visibility = 'hidden';
+                    pre.style.display = 'none';
+                }
+            }
+            function scheduleHides() {
+                setTimeout(hidePreloader, 100);
+                setTimeout(hidePreloader, 1200);
+                setTimeout(hidePreloader, 3500);
+            }
+            if (document.readyState === 'complete') {
+                hidePreloader();
+                scheduleHides();
+            } else {
+                document.addEventListener('DOMContentLoaded', scheduleHides);
+                window.addEventListener('load', hidePreloader);
+                window.addEventListener('pageshow', function(){ setTimeout(hidePreloader, 100); });
+            }
+        })();
+        </script>
+        
+        <!-- SEO Meta Tags -->
+        <title>Portfolio of Your Namve | Tattoo Artist in Your City, ST</title>
+        <meta name="description" content="Transforming visions into timeless art with every needle stroke. From bold traditional pieces to delicate fine-line designs, I bring your stories to life throug">
+        <meta name="keywords" content="Your Namve, tattoo, artist, Your City, ST">
+        <meta name="author" content="vladimir Romanovski">
+        <meta name="robots" content="index,follow">
+        <meta name="geo.region" content="Your City, ST">
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Portfolio of Your Namve | Tattoo Artist in Your City, ST">
+        <meta property="og:description" content="Transforming visions into timeless art with every needle stroke. From bold traditional pieces to delicate fine-line designs, I bring your stories to life throug">
+        <meta property="og:image" content="img/hero-background.jpg">
+        <meta property="og:url" content="">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="vladimir Romanovski - Tattoo Artist">
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Portfolio of Your Namve | Tattoo Artist in Your City, ST">
+        <meta name="twitter:description" content="Transforming visions into timeless art with every needle stroke. From bold traditional pieces to delicate fine-line designs, I bring your stories to life throug">
+        <meta name="twitter:image" content="img/hero-background.jpg">
+        
+        <!-- Canonical URL -->
+        <link rel="canonical" href="">
+        
+		    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+		
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Kaushan+Script:wght@400&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&family=Arvo:wght@400;700&family=UnifrakturMaguntia:wght@400&family=Limelight:wght@400&family=Great+Vibes:wght@400&family=Permanent+Marker:wght@400&family=Lacquer:wght@400&family=Griffy:wght@400&family=Pirata+One:wght@400&family=Rubik+Dirt:wght@400&family=Caprasimo:wght@400&family=Gravitas+One:wght@400&family=Bangers:wght@400&family=Racing+Sans+One:wght@400&family=Cinzel:wght@400;500;600;700&family=Meow+Script:wght@400&family=Kaushan+Script:wght@400&display=swap" rel="stylesheet">
+		
+		<!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <!-- Themify Icons CSS -->
+        <link rel="stylesheet" href="assets/css/themify-icons.css">
+        <!-- Elegant Font Icons CSS -->
+        <link rel="stylesheet" href="assets/css/elegant-font-icons.css">
+        <!-- Elegant Line Icons CSS -->
+        <link rel="stylesheet" href="assets/css/elegant-line-icons.css">
+		<!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- Venobox CSS -->
+        <link rel="stylesheet" href="assets/css/venobox/venobox.css">
+
+        <!-- animate CSS -->
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+
+
+		<!-- Main CSS -->
+        <link rel="stylesheet" href="assets/css/main.css">
+		<!-- Responsive CSS -->
+        <link rel="stylesheet" href="assets/css/responsive.css">
+
+
+        
+        <style>
+			/* FORCE visibility for contact submit button */
+#contact form button,
+#contact-form button {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
+  padding: 12px 24px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#contact form button:hover,
+#contact-form button:hover {
+  background: transparent;
+  color: #ffffff;
+}
+
+            :root {
+                --brand-color: #FFB300;
+                --brand-color-light: #ffe633;
+                --heading-font: 'Kaushan Script', sans-serif;
+            }
+            
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'Kaushan Script', sans-serif !important;
+                color: var(--brand-color);
+            }
+            
+            /* More specific selectors to ensure fonts are applied */
+            .hero-content h1,
+            .about-content h2,
+            .section-heading h2,
+            .navbar-brand .artist-name {
+                font-family: 'Kaushan Script', sans-serif !important;
+            }
+            
+            /* Override letter-spacing for H1 elements */
+            h1 {
+                letter-spacing: 0.05em !important;
+            }
+            
+            /* Specific override for hero H1 */
+            .hero-content h1 {
+                letter-spacing: 0.05em !important;
+            }
+            
+            .hero-bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hero-background.jpg') center/cover;
+            }
+            .hero-content {
+                position: relative;
+                z-index: 1;
+            }
+            .down-arrow {
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 1;
+                text-align: center;
+            }
+            .about-area {
+                padding: 100px 0;
+            }
+            .artist-portrait-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+            .artist-portrait-container img {
+                width: 100%;
+                height: auto;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            }
+            @media (max-width: 991px) {
+                .artist-portrait-container img {
+                    /* No max-width, allow full column width */
+                }
+            }
+            @media (max-width: 767px) {
+                .about-area {
+                    padding: 60px 0;
+                }
+                .artist-portrait-container img {
+                    /* No max-width, allow full column width */
+                }
+            }
+        </style>
+        
+        <script>
+            // Prevent main.js from auto-populating placeholder portfolio images
+            // Note: This flag is set by the configurator for preview mode only
+            // In the exported site, this flag is NOT set, allowing dynamic portfolio loading
+            
+
+            // Helper function to adjust color brightness
+            function adjustBrightness(hex, percent) {
+                const num = parseInt(hex.replace("#",""), 16);
+                const amt = Math.round(2.55 * percent);
+                const R = Math.min(255, Math.max(0, (num >> 16) + amt));
+                const G = Math.min(255, Math.max(0, (num >> 8 & 0x00FF) + amt));
+                const B = Math.min(255, Math.max(0, (num & 0x0000FF) + amt));
+                return "#" + (0x1000000 + R * 0x10000 + G * 0x100 + B).toString(16).slice(1);
+            }
+
+            // IndexedDB utility for portfolio images
+            const portfolioDB = (function() {
+                const DB_NAME = 'PortfolioDB';
+                const STORE_NAME = 'portfolioImages';
+                const DB_VERSION = 1;
+                let db = null;
+
+                function openDB() {
+                    return new Promise((resolve, reject) => {
+                        if (db) return resolve(db);
+                        const request = indexedDB.open(DB_NAME, DB_VERSION);
+                        request.onupgradeneeded = function(e) {
+                            const db = e.target.result;
+                            if (!db.objectStoreNames.contains(STORE_NAME)) {
+                                db.createObjectStore(STORE_NAME, { keyPath: 'id', autoIncrement: true });
+                            }
+                        };
+                        request.onsuccess = function(e) {
+                            db = e.target.result;
+                            resolve(db);
+                        };
+                        request.onerror = function(e) {
+                            reject(e);
+                        };
+                    });
+                }
+
+                async function getAllPortfolioImages() {
+                    const db = await openDB();
+                    return new Promise((resolve, reject) => {
+                        const tx = db.transaction(STORE_NAME, 'readonly');
+                        const store = tx.objectStore(STORE_NAME);
+                        const req = store.getAll();
+                        req.onsuccess = () => resolve(req.result);
+                        req.onerror = () => reject(req.error);
+                    });
+                }
+
+                return { getAllPortfolioImages };
+            })();
+
+            // Portfolio loading logic
+            async function loadPortfolioImages() {
+                try {
+                    // First, try to get uploaded images from IndexedDB (for preview mode)
+                    const uploadedImages = await portfolioDB.getAllPortfolioImages();
+                    const portfolioContainer = document.querySelector('.portfolio-items');
+                    
+                    if (!portfolioContainer) return;
+                    
+                    if (uploadedImages && uploadedImages.length > 0) {
+                        // Display uploaded images for preview mode
+                        portfolioContainer.innerHTML = '';
+                        uploadedImages.forEach((image, index) => {
+                            const imageNumber = (index + 1).toString().padStart(3, '0');
+                            const portfolioItem = document.createElement('div');
+                            portfolioItem.className = 'col-lg-3 col-sm-6';
+                            portfolioItem.innerHTML = `
+                                <div class="portfolio-box wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="${(index * 0.1).toFixed(1)}s">
+                                    <div class="portfolio-thumb">
+                                        <img src="${image.dataUrl}" alt="Portfolio ${imageNumber}">
+                                    </div>
+                                    <a href="${image.dataUrl}" class="hover img-popup" data-gall="galleryimg">
+                                        <div></div>
+                                    </a>
+                                </div>
+                            `;
+                            portfolioContainer.appendChild(portfolioItem);
+                        });
+                        
+                        // Re-initialize Venobox for the new portfolio items
+                        if (window.jQuery && window.jQuery.fn.venobox) {
+                            window.jQuery('.img-popup').venobox({ numeratio: true, infinigall: true });
+                        }
+                    } else {
+                        // No uploaded images found, let the dynamic JS handle it (for exported site)
+                        // The main.js populatePortfolio() function will run and load from portfolio/ folder
+                    }
+                } catch (error) {
+                    console.error('Error loading portfolio images:', error);
+                    // Fallback to dynamic loading
+                }
+            }
+
+            // Apply saved preferences from localStorage for preview functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                // Load portfolio images first
+                loadPortfolioImages();
+                
+                // Remove previous base URL handling and let relative paths work naturally
+                const iframe = document.querySelector('iframe');
+                if (iframe) {
+                    // Ensure iframe src is relative to setup directory
+                    if (!iframe.src.startsWith('setup/')) {
+                        iframe.src = 'setup/' + iframe.src.split('/').pop();
+                    }
+                }
+                
+                const saved = localStorage.getItem('portfolioConfig');
+                // Fallback defaults (e.g., GitHub Pages) if no saved config exists yet
+                let config = {
+                    contactFormType: 'formspree',
+                    formspreeId: 'mzdazjvy'
+                };
+                if (saved) {
+                    config = JSON.parse(saved);
+                }
+                    
+                    // Apply brand color
+                    if (config.brandColor) {
+                        const lighterColor = adjustBrightness(config.brandColor, 20);
+                        document.documentElement.style.setProperty('--brand-color', config.brandColor);
+                        document.documentElement.style.setProperty('--brand-color-light', lighterColor);
+                        document.documentElement.style.setProperty('--heading-font', `'${config.headingFont}', sans-serif`);
+                    }
+                    
+                    // Apply heading font
+                    if (config.headingFont) {
+                        document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(heading => {
+                            heading.style.fontFamily = `'${config.headingFont}', sans-serif`;
+                        });
+                    }
+                    
+                    // Apply SEO and navigation updates
+                    if (config.artistName && config.cityState) {
+                        const pageTitle = `${config.artistName} - Tattoo Artist in ${config.cityState}`;
+                        document.title = pageTitle;
+                        
+                        // Update navigation with hierarchical structure
+                        const artistName = document.querySelector('.navbar-brand .artist-name');
+                        const artistLocation = document.querySelector('.navbar-brand .artist-location');
+                        if (artistName) artistName.textContent = config.artistName;
+                        if (artistLocation) artistLocation.textContent = 'Tattoo Artist in ' + config.cityState;
+                        
+                        // Update footer copyright
+                        const copyrightText = document.querySelector('.copyright-text');
+                        if (copyrightText) {
+                            const currentYear = new Date().getFullYear();
+                            copyrightText.textContent = `© ${currentYear} ${config.artistName}. All Rights Reserved.`;
+                        }
+                        
+                        // Update meta description with hero subtitle
+                        if (config.heroSubtitle) {
+                            const metaDescription = config.heroSubtitle.replace(/<[^>]*>/g, '').substring(0, 160);
+                            const metaDesc = document.querySelector('meta[name="description"]');
+                            if (metaDesc) metaDesc.setAttribute('content', metaDescription);
+                        }
+                    }
+
+                    // Apply hero content
+                    if (config.heroTitle) {
+                        const heroTitle = document.querySelector('.hero-content h1');
+                        if (heroTitle) heroTitle.innerHTML = config.heroTitle;
+                    }
+                    
+                    if (config.heroSubtitle) {
+                        const heroSubtitle = document.querySelector('.hero-content p');
+                        if (heroSubtitle) heroSubtitle.innerHTML = config.heroSubtitle;
+                    }
+
+                    // Apply hero background
+                    const uploadedHeroBackground = JSON.parse(localStorage.getItem('uploadedHeroBackground') || 'null');
+                    if (uploadedHeroBackground && uploadedHeroBackground.dataUrl) {
+                        const heroBg = document.querySelector('.hero-bg');
+                        if (heroBg) {
+                            heroBg.style.background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${uploadedHeroBackground.dataUrl}') center/cover`;
+                        }
+                    } else {
+                        const heroBg = document.querySelector('.hero-bg');
+                        if (heroBg) {
+                            heroBg.style.background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hero-background.jpg') center/cover`;
+                        }
+                    }
+
+                    // Apply artist portrait
+                    const uploadedArtistPortrait = JSON.parse(localStorage.getItem('uploadedArtistPortrait') || 'null');
+                    if (uploadedArtistPortrait && uploadedArtistPortrait.dataUrl) {
+                        const artistPortrait = document.querySelector('.artist-portrait-container img');
+                        if (artistPortrait) {
+                            artistPortrait.src = uploadedArtistPortrait.dataUrl;
+                            artistPortrait.alt = config.artistName || 'Artist Portrait';
+                        }
+                    }
+                    
+                    // Apply about content
+                    if (config.aboutTitle) {
+                        const aboutTitle = document.querySelector('.about-content h2');
+                        if (aboutTitle) aboutTitle.textContent = config.aboutTitle;
+                    }
+                    
+                    if (config.aboutText) {
+                        const aboutText = document.querySelector('.about-content p');
+                        if (aboutText) aboutText.textContent = config.aboutText;
+                    }
+                    
+                    // Apply social links
+                    const socialList = document.querySelector('.social-link');
+                    if (socialList) {
+                        socialList.innerHTML = '';
+                        
+                        if (config.facebookLink && config.facebookLink.trim()) {
+                            socialList.innerHTML += `<li><a href="${config.facebookLink}"><i class="fa fa-facebook"></i></a></li>`;
+                        }
+                        
+                        if (config.xLink && config.xLink.trim()) {
+                            socialList.innerHTML += `<li><a href="${config.xLink}"><i class="fa fa-twitter"></i></a></li>`;
+                        }
+                        
+                        if (config.tiktokLink && config.tiktokLink.trim()) {
+                            socialList.innerHTML += `<li><a href="${config.tiktokLink}"><i class="fa fa-music"></i></a></li>`;
+                        }
+                        
+                        if (config.instagramLink && config.instagramLink.trim()) {
+                            socialList.innerHTML += `<li><a href="${config.instagramLink}"><i class="fa fa-instagram"></i></a></li>`;
+                        }
+                    }
+                    
+                    // Apply navigation social icons
+                    const navSocialList = document.querySelector('.nav-social');
+                    if (navSocialList) {
+                        navSocialList.innerHTML = '';
+                        
+                        if (config.emailAddress && config.emailAddress.trim()) {
+                            navSocialList.innerHTML += `<li><a href="mailto:${config.emailAddress}"><i class="fa fa-envelope"></i></a></li>`;
+                        }
+                        
+                        if (config.facebookLink && config.facebookLink.trim()) {
+                            navSocialList.innerHTML += `<li><a href="${config.facebookLink}"><i class="fa fa-facebook"></i></a></li>`;
+                        }
+                        
+                        if (config.xLink && config.xLink.trim()) {
+                            navSocialList.innerHTML += `<li><a href="${config.xLink}"><i class="fa fa-twitter"></i></a></li>`;
+                        }
+                        
+                        if (config.tiktokLink && config.tiktokLink.trim()) {
+                            navSocialList.innerHTML += `<li><a href="${config.tiktokLink}"><i class="fa fa-music"></i></a></li>`;
+                        }
+                        
+                        if (config.instagramLink && config.instagramLink.trim()) {
+                            navSocialList.innerHTML += `<li><a href="${config.instagramLink}"><i class="fa fa-instagram"></i></a></li>`;
+                        }
+                    }
+
+                    // Apply contact form
+                    const contactFormContainer = document.getElementById('contact-form-container');
+                    if (contactFormContainer) {
+                        const contactType = config.contactFormType || 'disable';
+                        let formHtml = '';
+
+                        if (contactType === 'formspree') {
+                            const formspreeId = config.formspreeId || '';
+                            if (formspreeId) {
+                                formHtml = `<form action="https://formspree.io/f/mzdazjvy" method="POST" class="contact-form">
+                                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                                    <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                                    <textarea class="form-control message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                                    <button type="submit" class="default-btn">Send Message</button>
+                                </form>`;
+                            }
+                        } else if (contactType === 'netlify') {
+                            formHtml = `<!-- Visible Netlify form -->
+                            <form name="contact" method="POST" netlify class="contact-form">
+                                <input type="hidden" name="form-name" value="contact" />
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <textarea class="form-control message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                      <button type="submit">Send</button>
+                                    </div>
+                                </div>
+                            </form>`;
+                        }
+
+                        if (formHtml) {
+                            contactFormContainer.innerHTML = formHtml;
+                        } else {
+                            const formRow = contactFormContainer.closest('.row');
+                            if (formRow) formRow.style.display = 'none';
+                        }
+                    }
+                }
+            });
+        </script>
+    </head>
+    <body data-spy="scroll" data-target="#navmenu" data-offset="70">        
+        <div class="site-preloader-wrap">
+            <div class="spinner"></div>
+        </div><!-- Preloader -->
+        
+        <header id="header" class="header-section">
+            <div class="container">
+                <nav class="navbar">
+                    <div class="navbar-brand">
+                        <div class="artist-name">vladimir Romanovski</div>
+                        <div class="artist-location">Tattoo Artist in Barcelona, Pineda De Mar.</div>
+                    </div>
+                    
+                    <div class="navbar-center">
+                        <div id="navmenu" class="mainmenu">
+                            <ul class="nav">
+                                <li><a data-scroll class="nav-link active" href="#home">Home <span class="sr-only">(current)</span></a></li>
+                                <li><a data-scroll class="nav-link" href="#about">About</a></li>
+                                <li><a data-scroll class="nav-link" href="#portfolio">Portfolio</a></li>
+                                <li><a data-scroll class="nav-link" href="#aftercare">Aftercare</a></li>
+                                <li><a data-scroll class="nav-link" href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="navbar-right">
+                        <ul class="nav-social">
+                            <li><a href="mailto:inktattooastral@gmail.com"><i class="fa fa-envelope"></i></a></li><li><a href="https://www.instagram.com/astralproyecto/" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                        <div class="hamburger-menu">
+                            <div class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            
+            <!-- Mobile Navigation Overlay -->
+            <div class="mobile-nav-overlay">
+                <div class="mobile-nav-content">
+                    <ul class="mobile-nav">
+                        <li><a data-scroll class="mobile-nav-link" href="#home">Home</a></li>
+                        <li><a data-scroll class="mobile-nav-link" href="#about">About</a></li>
+                        <li><a data-scroll class="mobile-nav-link" href="#portfolio">Portfolio</a></li>
+                        <li><a data-scroll class="mobile-nav-link" href="#aftercare">Aftercare</a></li>
+                        <li><a data-scroll class="mobile-nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                    
+                    <!-- Mobile Social Icons -->
+                    <div class="mobile-social-icons">
+                        <ul class="mobile-social">
+                            <li><a href="mailto:inktattooastral@gmail.com"><i class="fa fa-envelope"></i></a></li><li><a href="https://www.instagram.com/astralproyecto/" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+		</header> <!-- Header -->
+		
+        <section id="home" class="section hero-section d-flex align-items-center">
+            <div class="hero-bg"></div>
+            <div class="container">
+                <div class="hero-content text-center wow fadeInUp" data-wow-duration="1s">
+                    <h1>Astral Proyecto<br>Ink that tells your story.</h1>
+                    <p>Transforming visions into timeless art with every needle stroke. From bold traditional pieces to delicate fine-line designs, I bring your stories to life through ink.</p>
+                </div>
+            </div>
+            <div class="down-arrow">
+                <a data-scroll href="#about" class="arrow-animated"><i class="ti-arrow-down"></i></a>
+            </div>
+        </section><!-- hero-section -->
+        
+        <section id="about" class="about-area bg-dark">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 d-flex align-items-center">
+                        <div class="about-content pdl-80 wow fadeInLeft" data-wow-duration="1s">
+                            <div class="section-heading mb-20">
+                               <h2>About Me</h2>
+                            </div>
+                            <p>With over 9 years of experience, I've dedicated my career to creating meaningful artwork that speaks to the soul. My passion lies in blending traditional techniques with contemporary design, ensuring each piece is as unique as the person wearing it. Whether you're looking for a small, intimate design or a full-sleeve masterpiece, I approach every project with the same level of artistic integrity and attention to detail. My goal is to create art that not only looks stunning but tells your personal story for a lifetime.</p>
+                            <a href="#contact" class="default-btn" data-scroll>Get in Touch</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="artist-portrait-container wow fadeInRight" data-wow-duration="1s">
+                            <img src="img/artist-portrait.jpg" alt="Artist Portrait" style="max-width: 100%; height: auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- about-area -->
+        
+        <section id="portfolio" class="portfolio-section bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="section-heading wow fadeInUp" data-wow-duration="1s">
+                            <h2 class="mb-20">Portfolio</h2>
+                            <p class="mb-20">This is a curated selection of my work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row portfolio-items">
+                   <!-- Portfolio items will be dynamically loaded by JS -->
+                </div>
+            </div>
+        </section><!-- Portfolio Section -->
+        
+        <section id="aftercare" class="aftercare-section padding">
+            <div class="container-fluid">
+                <div class="row aftercare-area d-flex align-items-center">
+                    <div class="col-lg-4 col-md-4 xs-padding">
+                        <div class="section-heading pdl-80 wow fadeInLeft" data-wow-duration="1s">
+                            <h2 class="mb-20">Aftercare</h2>
+                            <p class="mb-20">To keep your new tattoo looking sharp and healing properly, follow these steps.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-8 xs-padding">
+                        <div class="row aftercare-wrap">
+                            <div class="col-lg-4 col-sm-6 pd-15">
+                                <div class="aftercare-content wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.1s">
+                                    <i class="fa fa-shield"></i>
+                                    <h3>Keep it Covered</h3>
+                                    <p>Leave the bandage on for at least 2-4 hours after getting your tattoo.</p>
+                                </div>
+                            </div><!-- Aftercare-1 -->
+                            <div class="col-lg-4 col-sm-6 pd-15">
+                                <div class="aftercare-content wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.2s">
+                                    <i class="fa fa-tint"></i>
+                                    <h3>Wash Gently</h3>
+                                    <p>Use lukewarm water and fragrance-free soap to clean your tattoo daily.</p>
+                                </div>
+                            </div><!-- Aftercare-2 -->
+                            <div class="col-lg-4 col-sm-6 pd-15">
+                                <div class="aftercare-content wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">
+                                    <i class="fa fa-heart"></i>
+                                    <h3>Moisturize</h3>
+                                    <p>Apply a thin layer of aftercare ointment to keep your tattoo hydrated.</p>
+                                </div>
+                            </div><!-- Aftercare-3 -->
+                            <div class="col-lg-4 col-sm-6 pd-15">
+                                <div class="aftercare-content wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.4s">
+                                    <i class="fa fa-ban"></i>
+                                    <h3>Avoid Soaking</h3>
+                                    <p>No swimming, hot tubs, or long baths while your tattoo is healing.</p>
+                                </div>
+                            </div><!-- Aftercare-4 -->
+                            <div class="col-lg-4 col-sm-6 pd-15">
+                                <div class="aftercare-content wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.5s">
+                                    <i class="fa fa-sun-o"></i>
+                                    <h3>Stay Out of the Sun</h3>
+                                    <p>Keep your tattoo covered or use SPF 30+ sunscreen to prevent fading.</p>
+                                </div>
+                            </div><!-- Aftercare-5 -->
+                            <div class="col-lg-4 col-sm-6 pd-15">
+                                <div class="aftercare-content wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
+                                    <i class="fa fa-hand-paper-o"></i>
+                                    <h3>No Picking</h3>
+                                    <p>Let scabs and peeling skin fall off naturally to avoid scarring.</p>
+                                </div>
+                            </div><!-- Aftercare-6 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- aftercare-section -->
+        
+        <section id="contact" class="contact-section padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                       <div class="section-heading wow fadeInUp" data-wow-duration="1s">
+                           <h2>Contact</h2>
+                           <p>Looking to book time on my calendar, or just say hello? Drop me a line.</p>
+                       </div>
+                    </div>
+
+                    <div id="contact-form-container"></div>
+                <!-- Social Links Section -->
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="social-links-section wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+                            <h3 style="color: #F5F6F5; margin-bottom: 20px;">Connect With Me</h3>
+                            <ul class="social-link">
+                                <li><a href="https://www.instagram.com/astralproyecto/" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a></li><li><a href="mailto:inktattooastral@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- Contact Section -->
+        
+        <footer class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <p class="copyright-text">&copy; 2026 vladimir Romanovski. All Rights Reserved.</p>
+                        <p class="powered-by">Powered by <a href="https://tattoostudiopro.com?source=portfolio-builder" target="_blank" rel="noopener">Tattoo Studio Pro</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- Footer Section -->
+
+		<a data-scroll href="#header" id="scroll-to-top"><i class="arrow_up"></i></a>
+	
+		<!-- jQuery Lib -->
+        <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+		<!-- bootstrap js -->
+		<script src="assets/js/vendor/bootstrap.min.js"></script>
+
+
+
+		<!-- Smooth Scroll JS -->
+		<script src="assets/js/vendor/smooth-scroll.min.js"></script>
+		<!-- Venobox JS -->
+		<script src="assets/js/vendor/venobox.min.js"></script>
+
+		<!-- Wow JS -->
+		<script src="assets/js/vendor/wow.min.js"></script>
+		<!-- Main JS -->
+		<script src="assets/js/main.js"></script>
+		
+		<!-- Additional venobox initialization for reliability -->
+		<script>
+			// Ensure venobox is properly initialized after page load
+			$(document).ready(function() {
+				// Wait for all content to load
+				setTimeout(function() {
+					if (typeof window.reinitializePortfolioLightbox === 'function') {
+						console.log('[preview.html] Reinitializing portfolio lightbox');
+						window.reinitializePortfolioLightbox();
+					}
+				}, 1000);
+				
+				// Additional initialization after window load
+				$(window).on('load', function() {
+					setTimeout(function() {
+						if (typeof window.reinitializePortfolioLightbox === 'function') {
+							console.log('[preview.html] Final reinitialization of portfolio lightbox');
+							window.reinitializePortfolioLightbox();
+						}
+					}, 500);
+				});
+			});
+			
+			// Robust preloader hiding mechanism
+			function hidePreloader() {
+				console.log('[preview.html] Hiding preloader');
+				document.body.classList.add('loaded');
+				
+				// Force hide preloader as backup
+				const preloader = document.querySelector('.site-preloader-wrap');
+				if (preloader) {
+					preloader.style.display = 'none';
+					preloader.style.visibility = 'hidden';
+					preloader.style.opacity = '0';
+				}
+			}
+			
+			// Multiple fallback mechanisms to ensure preloader is hidden
+			$(document).ready(function() {
+				// Immediate hide
+				setTimeout(hidePreloader, 100);
+			});
+			
+			$(window).on('load', function() {
+				// Hide after window load
+				setTimeout(hidePreloader, 100);
+			});
+			
+			// Fallback timeout to force hide after 3 seconds
+			setTimeout(hidePreloader, 3000);
+		</script>
+
+    </body>
+</html>
