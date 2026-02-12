@@ -188,7 +188,7 @@ if (document.readyState === 'complete') {
 			return;
 		}
 		portfolioContainer.empty();
-		var maxImages = 100; // Set a reasonable maximum
+		var maxImages = 300; // Set a reasonable maximum
 		var imageCount = 0;
 		var imagesToLoad = [];
 		function imageExists(src, callback) {
@@ -255,7 +255,7 @@ if (document.readyState === 'complete') {
 			});
 		}
 		function checkImages(index) {
-			if (index > maxImages || imagesToLoad.length >= 300) { // Limit to 20 images for performance
+			if (index > maxImages || imagesToLoad.length >= 300) { // Limit to 300 images for performance
 				console.log('[populatePortfolio] Reached limit, loading images. Index:', index, 'Images found:', imagesToLoad.length);
 				loadAllImages();
 				return;
