@@ -742,7 +742,21 @@
 		<script src="assets/js/vendor/wow.min.js"></script>
 		<!-- Main JS -->
 		<script src="assets/js/main.js"></script>
-		
+	<script>
+  // Force native Formspree submit and block theme AJAX handlers (main.js)
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector('#contact-form-container form[action*="formspree.io"]');
+    if (!form) return;
+
+    // Capture-phase listener runs before bubble listeners from theme scripts.
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      e.stopImmediatePropagation(); // stops other listeners that might call preventDefault()
+      form.submit(); // native submit -> Formspree
+    }, true);
+  });
+</script>
+	
 		<!-- Additional venobox initialization for reliability -->
 		<script>
 			// Ensure venobox is properly initialized after page load
