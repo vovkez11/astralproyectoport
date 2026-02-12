@@ -255,7 +255,7 @@ if (document.readyState === 'complete') {
 			});
 		}
 		function checkImages(index) {
-			if (index > maxImages || imagesToLoad.length >= 20) { // Limit to 20 images for performance
+			if (index > maxImages || imagesToLoad.length >= 300) { // Limit to 20 images for performance
 				console.log('[populatePortfolio] Reached limit, loading images. Index:', index, 'Images found:', imagesToLoad.length);
 				loadAllImages();
 				return;
